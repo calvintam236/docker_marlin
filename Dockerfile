@@ -10,6 +10,7 @@ RUN apt-get update \
 WORKDIR /tmp
 RUN curl -L -O https://github.com/SiaMining/marlin/releases/download/v1.0.0/marlin-1.0.0-linux-amd64.tar.gz \
     && tar -xvf marlin-1.0.0-linux-amd64.tar.gz \
-    && mv marlin /usr/local/bin/marlin
+    && mv marlin /usr/local/bin/marlin \
+    && chmod a+x /usr/local/bin/marlin
 
 ENTRYPOINT ["marlin"]
