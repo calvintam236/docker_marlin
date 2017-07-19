@@ -6,13 +6,19 @@ marlin supports Siacoin (SC).
 
 # How to use this image
 
-Run in background:
+Run in background with SiaMining:
 
 ```console
-$ docker run -d --name YOUR_CONTAINER_NAME calvintam236/marlin -H YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME -I 28
+$ docker run -d --name YOUR_CONTAINER_NAME calvintam236/marlin -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD -I 28
 ```
 
-Get ethminer options with:
+Run in background with other pools:
+
+```console
+$ docker run -d --name YOUR_CONTAINER_NAME calvintam236/marlin -H YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD -I 28
+```
+
+Get marlin options with:
 
 ```console
 $ docker run --rm calvintam236/marlin -h
