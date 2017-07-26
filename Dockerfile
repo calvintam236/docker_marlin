@@ -9,6 +9,7 @@ RUN apt-get update \
     && apt-get -y --no-install-recommends install ca-certificates curl \
     && curl -L -O https://github.com/SiaMining/marlin/releases/download/v1.0.0/marlin-1.0.0-linux-amd64.tar.gz \
     && tar -xvf marlin-1.0.0-linux-amd64.tar.gz \
+    && rm marlin-1.0.0-linux-amd64.tar.gz \
     && mv marlin /usr/local/bin/marlin \
     && chmod a+x /usr/local/bin/marlin \
     && apt-get -y remove ca-certificates curl \
