@@ -18,7 +18,7 @@ Run in background with other pools:
 $ docker run -d --device /dev/dri:/dev/dri --name YOUR_CONTAINER_NAME calvintam236/marlin -H YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD -I 28
 ```
 
-Get marlin options with:
+Get `marlin` options with:
 
 ```console
 $ docker run --rm calvintam236/marlin -h
