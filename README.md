@@ -6,16 +6,28 @@ marlin supports Siacoin (SC).
 
 # How to use this image
 
-Run in background with SiaMining:
+Run in background with AMD (OpenCL) GPU mining and SiaMining:
 
 ```console
 $ docker run -d --device /dev/dri:/dev/dri --name YOUR_CONTAINER_NAME calvintam236/marlin -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD -I 28
 ```
 
-Run in background with other pools:
+Run in background with AMD (OpenCL) GPU mining and other pools:
 
 ```console
 $ docker run -d --device /dev/dri:/dev/dri --name YOUR_CONTAINER_NAME calvintam236/marlin -H YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD -I 28
+```
+
+Run in background with Nvidia (CUDA) GPU mining and SiaMining:
+
+```console
+$ docker run -d --device=/dev/nvidiactl --device=/dev/nvidia-uvm --device=/dev/nvidia0 --name YOUR_CONTAINER_NAME calvintam236/marlin -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD -I 28
+```
+
+Run in background with Nvidia (CUDA) GPU mining and other pools:
+
+```console
+$ docker run -d --device=/dev/nvidiactl --device=/dev/nvidia-uvm --device=/dev/nvidia0 --name YOUR_CONTAINER_NAME calvintam236/marlin -H YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD -I 28
 ```
 
 Get `marlin` options with:
