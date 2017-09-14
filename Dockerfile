@@ -1,4 +1,4 @@
-FROM calvintam236/ubuntu:amdgpu-pro
+FROM calvintam236/ubuntu:amd
 
 MAINTAINER calvintam236 <calvintam236@users.noreply.github.com>
 LABEL description="marlin in Docker. Supports GPU mining."
@@ -15,6 +15,6 @@ RUN apt-get update \
     && apt-get -y remove ca-certificates curl \
     && apt-get -y autoremove \
     && apt-get clean autoclean \
-    && rm -rf /var/lib/{apt,dpkg,cache,log}/
+    && rm -rf /var/lib/{apt,dpkg,cache,log}
 
 ENTRYPOINT ["marlin"]
