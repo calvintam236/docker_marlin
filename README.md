@@ -21,7 +21,7 @@ $ docker run -d --device /dev/dri:/dev/dri --name YOUR_CONTAINER_NAME calvintam2
 Get `marlin` options with:
 
 ```console
-$ docker run --rm calvintam236/marlin:amd -h
+$ docker run --rm calvintam236/marlin:amd
 ```
 
 Fetch logs of a container:
