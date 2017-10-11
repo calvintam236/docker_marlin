@@ -9,13 +9,13 @@ marlin supports Siacoin (SC).
 Run in background with SiaMining:
 
 ```console
-$ docker run -d --device /dev/dri:/dev/dri --name YOUR_CONTAINER_NAME calvintam236/marlin:amd -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD -I 28
+$ docker run -d --device /dev/kfd --device /dev/dri --name YOUR_CONTAINER_NAME calvintam236/marlin:amd -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD -I 28
 ```
 
 Run in background with other pools:
 
 ```console
-$ docker run -d --device /dev/dri:/dev/dri --name YOUR_CONTAINER_NAME calvintam236/marlin:amd -H YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD -I 28
+$ docker run -d --device /dev/kfd --device /dev/dri --name YOUR_CONTAINER_NAME calvintam236/marlin:amd -H YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD -I 28
 ```
 
 Get `marlin` options with:
